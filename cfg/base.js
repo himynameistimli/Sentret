@@ -27,6 +27,13 @@ module.exports = {
     publicPath: defaultSettings.publicPath,
     noInfo: false
   },
+  postcss: function () {
+    return [
+      require('autoprefixer')({
+        browsers: ['last 2 versions', 'ie >= 8']
+      })
+    ];
+  },
   resolve: {
     extensions: ['', '.js', '.jsx'],
     alias: {
