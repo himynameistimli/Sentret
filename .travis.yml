@@ -1,9 +1,24 @@
 language: node_js
 node_js:
-  - "6.1"
+- '6.1'
 branches:
   only:
-    - master
+  - master
+cache:
+  directories:
+  - node_modules
 before_script:
-  - npm install phantomjs
-  - npm install -g karma
+- npm install phantomjs
+- npm install -g karma
+deploy:
+  provider: s3
+  access_key_id:
+    secure: doqoJZF/V0VgLFJhfBYKWthf15zg1SO3boXOvL80H0n7ec1JBkfZBQDgDZ4ivGNwUE1J58kiSDB7VuxlcEYWvTjr6t3L02Q2/EHvGv1U9rd388Rk2r5QBKR94nkdMCpFdF4J14Kda6qXeRCITJNF3hA3mm8VQq2o0wJdC18LraaZR+hY2NAApz8nl4lqO7sb0ZEAX1jZL90yi062+36RFxnm0YDFQ2lnJiD/JS+0KaeSWAAUCNI1m3biKz8ptZI3LDvxPBhxAtAPFAAhnMHiHANzewNCFIVvQxz1juRfYiR25t2oMwzwqUx2ThvAUnMZiToCXRAdITmapxJ0utvNxl4aPsuhGgDeRJEcHcu/sZzjEXFjj5AW5Sl6qhKEo8zD9egKdwoYv7UtG5IZaLzD7285xCbn/VMXJ3vz1BHmCboo1Bbn05fdLNp6ttpghDyizA0zDw30nDkorRRS+Oq1WojqGwUiH71h2JXqrdV8Kmg3kJukNxB94cWJ1dKAMbX74TzlBSetAKBX5/zFwQAidM0gAs0K+OH/8RGLrZv+kb/QTp6y6mFaFNfZWiUga8uH7lJ0SRCHDY18+QhTTogRtp+H07ratYZdrwXnDx6fn7A7yJeogG++hHeWxgvzWVOkqF5m1PKH85JYkKLpRFbBl1TtC0ZDNtKudimgFkiKHeg=
+  secret_access_key:
+    secure: E5pOJgjEIOZMhW7a5D+ldyrDCmJ50OzfQB7iBFnFP+et9sS5eA+V/LtpEWoKDuu4cLcm15mcBHeFPui7ZoAMFPt3JK/PXTB/yVmxrQEAW9Ziqlre1GR4BZNxkivsobn10mDrYXlshueKMQ+Kvmw82uq2Q4d7SbZ1BB34V8ccGvP0CGUOUjs7Z0up2POq7FkXWcNPIfmGBbEUBJ6SwgQzuSmcRHUsFBqCqm30iFnbyKMpZCDZ1l0SWHanFyVk+5ZCw2cgMKHjoXaj54AfZsFMDBsLyhwUSJ9vnLYBiNT4ZIkg9wQ8vfbFAelSQzPST6Btml5/wRnD4lU5+lT3RLG/vnjjdD89XE/CNAyPiAoZ1Bw1h4oZIqkjyAsIvwB4bvVPLDHi5/TfcMFGQveJg19gO/GKWElJJ8TnLUlWgZWXaXIW4L4f3Qo//yZycPHBDYGktSbvDrpLv27fcUCC+gC7oZnhsJRX+Y9TojHIJGQnxB3iZUIfD6ZNUkuRFMjlA4JeUpi44R65gDNjxdjbHTsxNyZNaT1ezGJEYbsuPw6z1Ool/nvSnuFG+c1PIM6ipFDCJHl6oIIgZl4KtPmFNA/RJbgxIrU+RQ6tpXIV5MoG5bVsknpSORQM5xr9yeoD/0FBEQ0/MRVBprphuwvrpWZt1LYfw6jz9R3zL/z0skuaeXU=
+  bucket: newslist.co
+  skip_cleanup: true
+  acl: public_read
+  region: ap-southeast-1
+  local_dir: dist
+  cache_control: max-age=31536000
