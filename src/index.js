@@ -1,7 +1,19 @@
-import 'core-js/fn/object/assign';
+import 'core-js/fn/object/assign'; // What is this for?
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/Main';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 
-// Render the main component into the dom
-ReactDOM.render(<App />, document.getElementById('app'));
+import Article from './pages/Article'
+import Gallery from './pages/Gallery'
+import Layout from './pages/Layout';
+
+const app = document.getElementById('app');
+
+ReactDOM.render(
+    <Router history={hashHistory}>
+        <Route path="/" component={Layout}>
+            <IndexRoute component={Gallery}></IndexRoute>
+            <Route path="articles(/:article)" name="articles" component={Article}></Route>
+        </Route>
+    </Router>
+, app);
