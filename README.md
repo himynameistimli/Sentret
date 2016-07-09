@@ -10,11 +10,11 @@ Okay so from now on the milo-dino work (for me at least) will be related to work
   - Function, Objects, Events   
   - AJAX
   - Promises
-- Cutting Edge Javascript (Sorta?)
+- Cutting Edge Javascript
   - ES6 + Babel
   - Service Workers
   - See frameworks below
-- CSS Basics (Say what??)
+- CSS Basics
   - BEM / and other naming conventions
   - SASS/SCSS
 - Task Runners + Other?
