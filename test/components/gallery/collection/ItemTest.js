@@ -7,16 +7,16 @@
 // import TestUtils from 'react-addons-test-utils';
 import createComponent from 'helpers/shallowRenderHelper';
 
-import ItemComponent from 'components/gallery/collection/ItemComponent.js';
+import CollectionItem from 'components/gallery/collection/CollectionItem.js';
 
-describe('ItemComponent', () => {
+describe('CollectionItem', () => {
   let component;
 
   beforeEach(() => {
-    component = createComponent(ItemComponent);
+    component = createComponent(CollectionItem);
   });
 
   it('should have its component name as default className', () => {
-    expect(component.props.className).to.equal('item-component');
+    expect(component.props.className).to.equal('item');
   });
 });

@@ -1,6 +1,6 @@
-/*eslint-env node, mocha */
-/*global expect */
-/*eslint no-console: 0*/
+/* eslint-env node, mocha */
+/* global expect */
+/* eslint no-console: 0*/
 'use strict';
 
 // Uncomment the following lines to use the react test utilities
@@ -8,16 +8,16 @@
 // const TestUtils = React.addons.TestUtils;
 import createComponent from 'helpers/shallowRenderHelper';
 
-import Main from 'components/Main';
+import Layout from 'pages/Layout.js';
 
-describe('MainComponent', () => {
-  let MainComponent;
+describe('Layout', () => {
+  let component;
 
   beforeEach(() => {
-    MainComponent = createComponent(Main);
+    component = createComponent(Layout);
   });
 
   it('should have its component name as default className', () => {
-    expect(MainComponent.props.className).to.equal('index');
+    expect(component.props.className).to.equal('layout');
   });
 });

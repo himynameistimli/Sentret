@@ -44,6 +44,7 @@ module.exports = {
       actions: srcPath + 'actions/',
       helpers: path.join(__dirname, '/../test/helpers'),
       components: srcPath + 'components/',
+      pages: srcPath + 'pages/',
       sources: srcPath + 'sources/',
       stores: srcPath + 'stores/',
       styles: srcPath + 'styles/',

@@ -12,7 +12,7 @@ export default class Gallery extends React.Component {
 
         // constants go here
         return (
-            <div>
+            <div className="gallery">
                 <div class="row">
                     { Collections }
                 </div>

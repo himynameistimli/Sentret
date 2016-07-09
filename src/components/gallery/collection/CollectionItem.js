@@ -14,7 +14,7 @@ export default class ItemComponent extends React.Component {
     };
 
     return (
-      <div className="item-component" style={itemStyle}>
+      <div className="item" style={itemStyle}>
         <h4>{title}</h4>
         <p> This is an article snippet </p>
         <a class="" href="#"> More </a>

@@ -1,3 +1,5 @@
+'use strict';
+
 require('normalize.css/normalize.css');
 require('styles/App.css');
 
@@ -23,7 +25,7 @@ export default class Layout extends React.Component {
     };
 
     return (
-        <div>
+        <div className='layout'>
             <Nav location={location} />
             <div class="container" style={containerStyle}>
                 <div class="row" style={navStyle}>
@@ -36,7 +38,9 @@ export default class Layout extends React.Component {
     );
   }
 }
+Layout.displayName = 'Layout';
 
-Layout.defaultProps = {
-};
+
+// Layout.defaultProps = {
+// };
 

@@ -7,16 +7,16 @@
 // import TestUtils from 'react-addons-test-utils';
 import createComponent from 'helpers/shallowRenderHelper';
 
-import CollectionComponent from 'components/gallery/CollectionComponent.js';
+import Collection from 'components/gallery/Collection.js';
 
-describe('CollectionComponent', () => {
+describe('Collection', () => {
   let component;
 
   beforeEach(() => {
-    component = createComponent(CollectionComponent);
+    component = createComponent(Collection);
   });
 
   it('should have its component name as default className', () => {
-    expect(component.props.className).to.equal('collection-component');
+    expect(component.props.className).to.equal('collection');
   });
 });
