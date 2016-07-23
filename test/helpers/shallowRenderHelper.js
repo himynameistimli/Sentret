@@ -21,3 +21,11 @@ export default function createComponent(component, props = {}, ...children) {
   shallowRenderer.render(React.createElement(component, props, children.length > 1 ? children : children[0]));
   return shallowRenderer.getRenderOutput();
 }
+
+
+
+
+/**
+ * Airbnb's enzyme can replace this render helper as it provides
+ * shallow and full rendering. see test.js for external code commented out
+ */

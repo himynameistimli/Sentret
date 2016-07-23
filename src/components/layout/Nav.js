@@ -35,17 +35,10 @@ export default class Nav extends React.Component {
         return (
             <nav class="" role="navigation">
                 <div class="container">
-                    <div class="navbar-header">
-                        <button type="" class="navbar-toggle" onClick={this.toggleCollapse.bind(this)} >
+                    <div class="nav__header">
+                        <button type="" class="nav__button-toggle" onClick={this.toggleCollapse.bind(this)} >
                             <span> toggle nav </span>
                         </button>
-                    </div>
-                    <div class={'navbar-collapse' + navClass}>
-                        <ul>
-                            <li activeClassName="active" onlyActiveonIndex={true}>
-                                <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}> Gallery </IndexLink>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </nav>
