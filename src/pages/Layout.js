@@ -30,6 +30,7 @@ export default class Layout extends React.Component {
             <div class="container" style={containerStyle}>
                 <div class="row" style={navStyle}>
                     <h1>newslist.co</h1>
+                    
                     { this.props.children }
                 </div>
             </div>

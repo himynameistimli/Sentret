@@ -1,6 +1,7 @@
 import React from 'react';
 import { IndexLink } from 'react-router';
 // import { Link } from 'react-router';
+require('styles/layout/Nav.scss');
 
 export default class Nav extends React.Component {
     constructor() {
@@ -19,9 +20,6 @@ export default class Nav extends React.Component {
         // const { location } = this.props;
         const { collapsed } = this.state;
 
-        // TODO: Don't forget to add this class in CSS
-        const navClass = collapsed ? 'collapse' : '';
-
         /**
          * TODO
          * CSS----------
@@ -36,9 +34,7 @@ export default class Nav extends React.Component {
             <nav class="" role="navigation">
                 <div class="container">
                     <div class="nav__header">
-                        <button type="" class="nav__button-toggle" onClick={this.toggleCollapse.bind(this)} >
-                            <span> toggle nav </span>
-                        </button>
+                        <div class="nav__title"> News List </div>
                     </div>
                 </div>
             </nav>

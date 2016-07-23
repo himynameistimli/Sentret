@@ -1,0 +1,6 @@
+scss_files: "**/*.scss"
+plugin_directories: ['.scss-linters']
+
+linters:
+  PropertySortOrder:
+    order: smacss

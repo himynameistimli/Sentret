@@ -1,0 +1,19 @@
+
+// Variables
+$blue: #2970C9;
+$white: #fdfdfd;
+$darkblue: 283549;
+
+$headingtext: Helvetica;
+$bodytext: Helvetica;
+
+.nav__header {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: $blue;
+  color: $white;
+}
+  .nav__title {
+    font-size: 1.5em;
+  }

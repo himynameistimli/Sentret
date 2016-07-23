@@ -8,7 +8,7 @@ export default class Collection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      items : []
+      items : [<CollectionItem title='test'/>]
     };
     this.addItem = this.addItem.bind(this);
   }
